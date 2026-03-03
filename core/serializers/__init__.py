@@ -1,3 +1,3 @@
 from .user import UserSerializer
-
+from .editora import EditoraSerializer  
 from .categoria import CategoriaSerializer
