@@ -1,4 +1,3 @@
-from posixpath import basename
 
 from django.contrib import admin
 from django.urls import include, path
@@ -9,11 +8,12 @@ from drf_spectacular.views import (
 )
 from rest_framework.routers import DefaultRouter
 
-from core.views import CategoriaViewSet, EditoraViewSet, AutorViewSet, UserViewSet
+from core.views import AutorViewSet, CategoriaViewSet, EditoraViewSet, LivroViewSet, UserViewSet
 
 router = DefaultRouter()
-router.register(r'autores', AutorViewSet, basename= 'autores')
-router.register(r'editoras', EditoraViewSet, basename= 'editoras')
+router.register(r'livros', LivroViewSet, basename='livros')
+router.register(r'autores', AutorViewSet, basename='autores')
+router.register(r'editoras', EditoraViewSet, basename='editoras')
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 
